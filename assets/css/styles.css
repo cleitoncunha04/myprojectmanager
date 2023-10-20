@@ -1,0 +1,177 @@
+@charset "UTF-8";
+
+* {
+  margin: 0px;
+  padding: 0px;
+  overflow-x: hidden;
+  box-sizing: border-box;
+}
+
+:root {
+  --cor00: #2a2b2e;
+  --cor01: #a4243b;
+  --cor02: #6c8ead;
+  --cor03: #f3dfbf;
+  --cor04: #eb8a90;
+}
+
+html,
+body {
+  height: 100vh;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 4fr 0.35fr;
+  grid-template-areas:
+    "conteudo"
+    "footer";
+}
+
+main {
+  grid-area: conteudo;
+  display: grid;
+  grid-template-columns: 4fr 3.5fr;
+  grid-template-rows: 1fr;
+  grid-template-areas: "espaco-imagem form-login";
+  /* background-image: linear-gradient(to bottom, #118AB2, #06D6A0); */
+}
+
+.espaco-imagem {
+  background-image: linear-gradient(-145deg, var(--cor04), var(--cor03));
+  grid-area: espaco-imagem;
+  display: flex;
+  flex-flow: column;
+  box-shadow: 5px -1px 10px rgba(0, 0, 0, 0.233);
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  padding: 20px;
+}
+
+.logo span {
+  text-decoration: overline !important;
+  color: var(--cor00);
+  line-height: 2.1vh;
+  font-weight: bold;
+}
+
+.texto-imagem {
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+}
+
+.imagem-login {
+  margin: 15px;
+  width: 3vw;
+}
+
+.form-login {
+  width: 100%;
+  grid-area: form-login;
+  display: flex;
+  flex-flow: column;
+  justify-content: center;
+  background-color: cor;
+}
+
+h1 {
+  text-align: center;
+}
+
+form {
+  padding: 15px;
+  display: flex;
+  flex-flow: column;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.txt-com-icone {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid var(--cor00);
+  display: flex;
+  box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.432);
+  background-color: #f4fffd;
+  border-radius: 5px;
+}
+
+.text-field {
+  background-color: #f4fffd;
+  margin: 5px 0px;
+  width: 100%;
+  border: none;
+}
+
+.text-field:focus {
+  outline: none;
+  padding: 2px;
+}
+
+.text-field::placeholder {
+  font-weight: bold;
+}
+
+.textField:focus::placeholder {
+  font: bolder 1.1em Arial, sanserif;
+}
+
+.icone-txt {
+  width: 30px;
+}
+
+.button {
+  margin: 10px;
+  padding: 10px;
+  width: 50%;
+  border-radius: 10px;
+  border: 1px solid white;
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.322);
+}
+form div {
+  font-size: 0.7em;
+  transition: 0.5s;
+  width: calc(100% - 10px);
+  margin: 10px;
+  display: flex;
+  justify-content: end;
+}
+
+div a {
+  text-decoration: none;
+  font-weight: bolder;
+}
+
+div a:hover {
+  font-size: 1.15em;
+  text-decoration: underline;
+  color: #e98a15;
+}
+
+.button:hover {
+  transform: scale(1.15);
+  background-color: var(--cor01);
+  color: white;
+  font-weight: bolder;
+  transition: 0.5s;
+}
+
+footer {
+  display: flex;
+  flex-flow: column;
+  justify-content: center;
+  align-items: center;
+  grid-area: footer;
+  background-color: var(--cor00);
+  color: #f4fffd;
+}
+
+footer p {
+  margin: 5px 0px;
+}
