@@ -1,0 +1,111 @@
+@charset "UTF-8";
+
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap");
+
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+}
+
+:root {
+  --cor00: #2a2b2e;
+  --cor01: #a4243b;
+  --cor02: #6c8ead;
+  --cor03: #f3dfbf;
+  --cor04: #eb8a90;
+}
+
+body {
+  font-family: "Montserrat", Arial, Helvetica, sans-serif;
+  height: 100vh;
+  display: flex;
+  flex-flow: column;
+  justify-content: center;
+  align-items: center;
+  background-image: linear-gradient(-145deg, var(--cor04), var(--cor03));
+}
+
+.form-cadastro {
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+  background-color: white;
+  padding: 25px;
+  border-radius: 10px;
+  box-shadow: 3px 5px 10px rgba(0, 0, 0, 0.342);
+}
+
+.logo {
+  width: 100%;
+  display: flex;
+  justify-content: start;
+  text-decoration: underline;
+  font-style: italic;
+  font-size: 0.85em;
+  margin: 15px 0px 0px 0px;
+}
+
+h2 {
+  margin: 15px;
+}
+
+.form-cadastro form {
+  width: 50vw;
+  display: flex;
+  flex-flow: column;
+  justify-content: center;
+}
+
+.text-field {
+  border: 1px solid var(--cor00);
+  margin: 10px 15px;
+  border-radius: 5px;
+  display: flex;
+  justify-content: space-between;
+  padding: 9px 10px;
+  background-color: #f4fffd;
+  box-shadow: 5px 5px 7px rgba(0, 0, 0, 0.37);
+}
+
+.input {
+  border: none;
+  margin: 5px 0px;
+  background-color: #f4fffd;
+}
+
+.input:focus {
+  outline: none;
+  /* padding: 5px; */
+}
+
+.input::placeholder {
+  font-weight: 700;
+}
+
+.input::placeholder:focus {
+  font: bolder 1.1em "Montserrat", sanserif;
+}
+
+.icone-text-field {
+  width: 25px;
+}
+
+.form-cadastro button {
+  width: 70%;
+  margin: auto;
+  padding: 10px;
+  border-radius: 10px;
+  border: 1px solid white;
+  box-shadow: 5px 5px 7px rgba(0, 0, 0, 0.37);
+  font-weight: 500;
+}
+
+.form-cadastro button:hover {
+  transform: scale(1.15);
+  background-image: linear-gradient(to right, var(--cor01), var(--cor04));
+  text-decoration: underline;
+  color: white;
+  transition: 0.5s;
+  font-weight: 700;
+}
